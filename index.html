@@ -1,7 +1,59 @@
 <html>
-<body>
-<h1>Welcome to Music Hubb - Listen to your free beats here</h1>
-<audio controls loop preload="metadata" style=" width:300px;">
-	<source src="./music/example.mp3" type="audio/mpeg">
-	Your browser does not support the audio element.
-</audio>
+  <style>
+    .background {
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+    }
+    .containerBox {
+      position: relative;
+      display: inline-block;
+    }
+    .track-list:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    .track-list {
+      position: absolute;
+      height: 100%;
+      text-align: center;
+      width: 100%;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+  <body>
+    <div class="background">
+      <div class="containerBox">
+        <div class="track-list">Your tracks should appear here</div>
+        <img class="img-responsive" src="./cover/cover.jpg" />
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const host = new URL(document.URL).host;
+  const trackList = document.querySelector(".track-list");
+
+  const tracks = [
+    {
+      filename: "01_Fly_me_to_the_moon__in_other_words_.mp3",
+    },
+    {
+      filename: "01_Fly_me_to_the_moon__in_other_words_.mp3",
+    },
+  ];
+  trackList.innerHTML = tracks.map((track) => {
+    return `
+              <audio controls loop preload="metadata" style="width: 300px">
+          <source src="./album/${track.filename}" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        `;
+  });
+</script>
