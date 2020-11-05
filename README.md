@@ -1,6 +1,6 @@
 # Example Music Site with Github
 
-This repo can be used to to generat an album site with Github just like the one [here]("https://github.com/music-hubb/music-hubb.github.io").
+This repo can be used to to generat an album site with Github just like the one [here](https://github.com/music-hubb/music-hubb.github.io).
 
 ## Setup 
 
