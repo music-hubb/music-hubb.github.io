@@ -51,7 +51,7 @@
   trackList.innerHTML = tracks.map((track) => {
     return `
               <audio controls loop preload="metadata" style="width: 300px">
-          <source src="./album/${track.filename}" type="audio/mpeg" />
+          <source src="./tracks/${track.filename}" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
         `;
